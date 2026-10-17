@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Thanks for reaching out · Peijia Deng</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="coffee-chat.css">
+</head>
+<body>
+  <main class="coffee-thanks">
+    <a href="/">Peijia Deng · Diga</a>
+    <div class="coffee-mark" aria-hidden="true">☕</div>
+    <div class="eyebrow">LET’S CONNECT</div>
+    <h1>Thanks for reaching out.</h1>
+    <p>I’ll reply to the email address you provided.</p>
+    <p id="thanks-note">If you suggested a coffee chat, please wait for my email confirming the time and meeting details. A request is not a confirmed booking.</p>
+    <a class="coffee-button" href="/#about">Back to my website <span aria-hidden="true">↗</span></a>
+    <p class="coffee-email-fallback">Need to change something? <a href="mailto:pdeng2@uw.edu">Email me</a>.</p>
+  </main>
+  <script>
+    if (new URLSearchParams(location.search).get('type') === 'message') {
+      document.getElementById('thanks-note').textContent = 'Thanks for sharing your note. I look forward to connecting.';
+    }
+  </script>
+</body>
+</html>
