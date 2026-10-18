@@ -6,7 +6,7 @@
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink);
   box-shadow: 0 24px 80px rgba(35, 37, 43, .2);
   overflow-y: auto;
@@ -31,7 +31,7 @@
   line-height: 1;
   cursor: pointer;
 }
-.wechat-close:hover { background: #ece9f2; }
+.wechat-close:hover { background: var(--accent-soft); }
 .wechat-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .wechat-qr { display: block; width: 100%; height: auto; max-height: 58dvh; object-fit: contain; margin: 10px auto 14px; }
 .wechat-help { margin: 0 0 6px; color: var(--muted); font-size: 13px; line-height: 1.6; text-align: center; }
