@@ -98,4 +98,31 @@
   window.addEventListener('load', scheduleActiveSection);
   window.addEventListener('pageshow', scheduleActiveSection);
   scheduleActiveSection();
+
+  // Carry the selected startup into the existing contact forms without replacing a visitor's message.
+  document.querySelectorAll('[data-startup-select]').forEach(select => {
+    const form = select.form;
+    const subject = form.querySelector('input[name="_subject"]');
+    const defaultSubject = subject.value;
+    function updateSubject() {
+      const kind = form.id === 'coffee-form' ? 'Coffee Chat' : 'Message';
+      subject.value = select.value === 'General conversation'
+        ? defaultSubject
+        : `[Startup: ${select.value}] ${kind} for Peijia`;
+    }
+    select.addEventListener('change', updateSubject);
+    form.addEventListener('reset', () => window.setTimeout(updateSubject, 0));
+    window.addEventListener('pageshow', updateSubject);
+    updateSubject();
+  });
+  document.querySelectorAll('[data-startup-interest]').forEach(link => {
+    link.addEventListener('click', () => {
+      const message = link.hash === '#leave-message';
+      const select = document.getElementById(message ? 'message-interest' : 'coffee-interest');
+      if (![...select.options].some(option => option.value === link.dataset.startupInterest)) return;
+      select.value = link.dataset.startupInterest;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      if (message) document.getElementById('leave-message').open = true;
+    });
+  });
 })();
