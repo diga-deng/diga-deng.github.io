@@ -1,0 +1,15 @@
+/* Visitor card: scoped to the portfolio footer. */
+.site-footer { align-items: center; gap: 24px; }
+.footer-contact { flex: 1 1 220px; }
+.footer-contact > a { display: inline-block; margin-top: 6px; }
+.visitor-card { flex: 0 1 350px; width: 350px; max-width: 100%; margin: 0; }
+.visitor-card > a { display: block; margin: 0; border-radius: 16px; overflow: hidden; }
+.visitor-card img { display: block; width: 100%; height: auto; aspect-ratio: 640 / 330; }
+.visitor-caption { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; font-size: 10px; line-height: 1.5; }
+.visitor-caption a { display: inline; margin: 0; }
+.visitor-card .visitor-status { margin: 6px 0 0; font-size: 11px; color: var(--muted); }
+@media (max-width: 700px) {
+  .site-footer { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer-contact { flex-basis: auto; }
+  .visitor-card { flex-basis: auto; width: 350px; }
+}
