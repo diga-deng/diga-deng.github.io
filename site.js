@@ -64,6 +64,23 @@
   window.addEventListener('hashchange', revealHashTarget);
   revealHashTarget();
 
+  // Re-align direct Coffee Chat links after the mobile browser finishes layout.
+  // In-app browsers may restore an old scroll position or shift after loading assets.
+  function alignCoffeeChatLink() {
+    if (location.hash !== '#coffee-chat') return;
+    const target = document.getElementById('coffee-chat');
+    if (!target) return;
+    const offset = (document.querySelector('.masthead')?.getBoundingClientRect().height || 62) + 18;
+    const top = window.scrollY + target.getBoundingClientRect().top - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+  }
+  window.addEventListener('hashchange', alignCoffeeChatLink);
+  window.addEventListener('pageshow', () => window.setTimeout(alignCoffeeChatLink, 80));
+  window.addEventListener('load', () => {
+    window.setTimeout(alignCoffeeChatLink, 100);
+    window.setTimeout(alignCoffeeChatLink, 450);
+  });
+
   // Use document positions to keep the highlighted section stable for long sections.
   let scheduled = false;
   function updateActiveSection() {
