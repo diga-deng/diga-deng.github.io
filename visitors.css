@@ -5,6 +5,17 @@
 .visitor-card { flex: 0 1 350px; width: 350px; max-width: 100%; margin: 0; }
 .visitor-card > a { display: block; margin: 0; border-radius: 16px; overflow: hidden; }
 .visitor-card img { display: block; width: 100%; height: auto; aspect-ratio: 640 / 330; }
+.visitor-card .visitor-regions {
+  margin: 8px 0 0;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.65;
+  letter-spacing: .01em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .visitor-caption { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; font-size: 10px; line-height: 1.5; }
 .visitor-caption a { display: inline; margin: 0; }
 .visitor-card .visitor-status { margin: 6px 0 0; font-size: 11px; color: var(--muted); }
@@ -13,3 +24,4 @@
   .footer-contact { flex-basis: auto; }
   .visitor-card { flex-basis: auto; width: 350px; }
 }
+
