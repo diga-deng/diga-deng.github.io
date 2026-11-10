@@ -2,8 +2,8 @@
   color-scheme: light;
   --ink: #302d3d;
   --muted: #6b6878;
-  --accent: #7556cf;
-  --accent-hover: #5837b0;
+  --accent: #183b66;
+  --accent-hover: #102b4d;
   --accent-soft: #eee8ff;
   --line: #eae5f4;
   --soft: #f4f1fb;
@@ -49,7 +49,7 @@ h1, h2, h3 { color: var(--ink); }
 .section-nav a:hover { color: var(--accent); text-decoration: none; }
 .section-nav a::after { content: ""; position: absolute; bottom: 10px; left: 0; right: 0; height: 4px; background: transparent; }
 .section-nav a.active { color: var(--accent); font-weight: 650; }
-.section-nav a.active::after { background: #a58bff; }
+.section-nav a.active::after { background: currentColor; }
 .theme-toggle { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; margin-left: auto; padding: 10px; border: 0; border-radius: 50%; background: transparent; color: var(--ink); }
 .theme-toggle:hover { background: var(--accent-soft); }
 .theme-toggle svg { width: 22px; height: 22px; }
