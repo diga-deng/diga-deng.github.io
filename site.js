@@ -27,7 +27,7 @@
     theme.setAttribute('aria-pressed', String(dark));
     theme.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
     theme.title = theme.getAttribute('aria-label');
-    document.querySelector('meta[name="theme-color"]').content = dark ? '#18151e' : '#fbfaff';
+    document.querySelector('meta[name="theme-color"]').content = getComputedStyle(root).getPropertyValue('--paper').trim();
   }
   updateThemeButton();
   theme.addEventListener('click', () => {
