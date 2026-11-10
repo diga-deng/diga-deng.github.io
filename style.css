@@ -4,12 +4,12 @@
   --muted: #6b6878;
   --accent: #002fa7;
   --accent-hover: #1646c5;
-  --accent-soft: #eee8ff;
-  --line: #eae5f4;
-  --soft: #f4f1fb;
+  --accent-soft: #d8ebff;
+  --line: #cbdff0;
+  --soft: #e8f3ff;
   --paper: #ecf7f9; /* #9ed9df at 20% over white */
   --surface: #ffffff;
-  --field-border: #d8d1e6;
+  --field-border: #adc9e2;
   --header: rgba(236, 247, 249, .97);
   --header-height: 62px;
   --page-width: 1100px;

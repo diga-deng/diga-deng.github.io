@@ -5,6 +5,8 @@
 .visitor-card { flex: 0 1 350px; width: 350px; max-width: 100%; margin: 0; }
 .visitor-card > a { display: block; margin: 0; border-radius: 16px; overflow: hidden; }
 .visitor-card img { display: block; width: 100%; height: auto; aspect-ratio: 640 / 330; }
+/* Shift the embedded map from lavender to blue in the light theme. */
+:root:not([data-theme="dark"]) .visitor-card img { filter: hue-rotate(-42deg); }
 .visitor-card .visitor-regions {
   margin: 8px 0 0;
   color: var(--accent);
