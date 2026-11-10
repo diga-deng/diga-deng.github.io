@@ -7,10 +7,10 @@
   --accent-soft: #d8ebff;
   --line: #cbdff0;
   --soft: #e8f3ff;
-  --paper: #ecf7f9; /* #9ed9df at 20% over white */
+  --paper: #e8f3ff; /* #8cc5ff at 20% over white */
   --surface: #ffffff;
   --field-border: #adc9e2;
-  --header: rgba(236, 247, 249, .97);
+  --header: rgba(232, 243, 255, .97);
   --header-height: 62px;
   --page-width: 1100px;
   --page-gutter: 28px;
